@@ -1,11 +1,13 @@
 export default function taskBlock(trueOrFalse) {
-  let task = false; // Use 'let' instead of 'const'
-  let task2 = true; // Use 'let' instead of 'const'
+  // Outer scope variables
+  const task = false; // This should always be false
+  const task2 = true; // This should always be true
 
   if (trueOrFalse) {
-    task = false; // Update outer variable
-    task2 = true; // Update outer variable
+    // When trueOrFalse is true, return the values of task and task2
+    return [task, task2]; // Return the outer variables
   }
 
-  return [task, task2]; // Return the current values of task and task2
+  // When trueOrFalse is false, also return the outer variables
+  return [task, task2]; // Return the outer variables
 }
