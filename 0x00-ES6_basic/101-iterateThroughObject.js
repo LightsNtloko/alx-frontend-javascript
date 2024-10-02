@@ -9,4 +9,3 @@ export default function iterateThroughObject(reportWithIterator) {
   // Join the names with ' | ' and return the result
   return employeeNames.join(' | ');
 }
-
