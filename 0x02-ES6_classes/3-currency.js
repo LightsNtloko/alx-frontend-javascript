@@ -32,6 +32,6 @@ export default class Currency {
 
   // The method to display full currency format
   displayFullCurrency() {
-    return 'Dollars ($)';
+    return `${this.name} (${this.code})`;
   }
 }
