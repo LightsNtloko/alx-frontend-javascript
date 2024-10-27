@@ -3,8 +3,8 @@ export default class Building {
     this._sqft = sqft;
 
     // Check if evacuationWarningMessage is implemented in subclass
-    if (this.constructor !== Building &&
-        this.evacuationWarningMessage === Building.prototype.evacuationWarningMessage) {
+    if (this.constructor !== Building
+        && this.evacuationWarningMessage === Building.prototype.evacuationWarningMessage) {
       throw new Error('Class extending Building must override evacuationWarningMessage');
     }
   }
